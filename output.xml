@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.11.0 on win32)" generated="20221110 14:01:49.034" rpa="false" schemaversion="3">
+<suite id="s1" name="TestServe" source="C:\Users\SaranWSM\Desktop\RobotFramework\TestServe.robot">
+<test id="s1-t1" name="Search case" line="19">
+<kw name="เปิดเว็บ google.com">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221110 14:01:49.680" level="INFO">Opening browser 'chrome' to base url 'https://google.com/'.</msg>
+<status status="PASS" starttime="20221110 14:01:49.679" endtime="20221110 14:01:55.901"/>
+</kw>
+<status status="PASS" starttime="20221110 14:01:49.678" endtime="20221110 14:01:55.901"/>
+</kw>
+<kw name="ค้นหาตาม keywords">
+<kw name="Input Text" library="Selenium2Library">
+<arg>name=q</arg>
+<arg>${expected_result}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221110 14:01:55.905" level="INFO">Typing text 'Podcasts ไทย' into text field 'name=q'.</msg>
+<status status="PASS" starttime="20221110 14:01:55.903" endtime="20221110 14:01:56.064"/>
+</kw>
+<kw name="Submit Form" library="Selenium2Library">
+<doc>Submits a form identified by ``locator``.</doc>
+<msg timestamp="20221110 14:01:56.065" level="INFO">Submitting form 'None'.</msg>
+<status status="PASS" starttime="20221110 14:01:56.065" endtime="20221110 14:01:58.336"/>
+</kw>
+<status status="PASS" starttime="20221110 14:01:55.903" endtime="20221110 14:01:58.336"/>
+</kw>
+<kw name="รอผลลัพธ์">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>${expected_result}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221110 14:01:58.338" endtime="20221110 14:01:58.389"/>
+</kw>
+<status status="PASS" starttime="20221110 14:01:58.337" endtime="20221110 14:01:58.390"/>
+</kw>
+<status status="PASS" starttime="20221110 14:01:49.677" endtime="20221110 14:01:58.391"/>
+</test>
+<status status="PASS" starttime="20221110 14:01:49.038" endtime="20221110 14:01:58.395"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestServe">TestServe</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
